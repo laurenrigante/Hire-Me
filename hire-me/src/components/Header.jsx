@@ -15,9 +15,6 @@ const Header = () => {
       </div>
       <div className="header-right">
        
-              <div data-testid="notification-wrapper" className='notification-wrapper' >
-                  <Notification/>
-              </div>
         
     <div>
         <Navbar/>
