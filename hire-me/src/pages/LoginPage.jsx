@@ -93,7 +93,7 @@ const LoginPage = () => {
             className="forgot-password-link"
             style={{ color: "#3531a1"}}
           >
-            Already have an account with us? Sign in now!
+          Dont have an account with us? Sign up now!
           </a>
           </div>
       <Footer />
