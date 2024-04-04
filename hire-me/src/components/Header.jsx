@@ -1,7 +1,6 @@
 import React from 'react';
 import "../styling/Header.css"
 import Navbar from './Navbar';
-import  Notification from '../components/Notification';
 
 /**
  * Functional component representing the header section of the website.
