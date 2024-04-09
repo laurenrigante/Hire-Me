@@ -1,5 +1,4 @@
 import React from 'react'
-import { FaSearch } from "react-icons/fa";
 import "../styling/Searchbar.css"
 
 const SearchBar = ({jobs, setSearchResults}) => {
@@ -32,10 +31,6 @@ const SearchBar = ({jobs, setSearchResults}) => {
             placeholder='Search For A Freelancer Using Key Words'
             onChange={handleSearchChange} //handle the change
             />
-
-            <button className='search-button'>
-            <FaSearch/>
-          </button>
         </form>
      </div>
     </>
