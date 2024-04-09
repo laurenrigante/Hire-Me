@@ -23,7 +23,7 @@ const Footer = () => {
               <ul className="footer-links">
                 <p className="titlefooter"> General</p>
                 <li>
-                  <Link className="link">Find a Freelancer</Link>
+                  <Link to="/FindAFreelancer" className="link">Find a Freelancer</Link>
                 </li>
                 <li>
                   <Link className="link">Promote My Business</Link>
