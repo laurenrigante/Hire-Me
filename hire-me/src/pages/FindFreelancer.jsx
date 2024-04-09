@@ -25,6 +25,7 @@ import ps from "../assets/business_images/ps.png";
 const FindFreelancer = () => {
 
     
+  const [searchResults, setSearchResults] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   //const [itemsPerPage] = useState(4); // Change this value according to your needs
 
@@ -153,14 +154,26 @@ const FindFreelancer = () => {
 
       <div>
         <div>
-          <SearchBar />
+          <SearchBar jobs={businessData} setSearchResults={setSearchResults} />
+          <div>
+          {searchResults.length > 0 ? (
+            searchResults.map((businessData, index) => (
+              <BusinessComponent key={index} businessData={businessData} />
+            ))
+          ) : (
+            businessData
+              .slice(
+                (currentPage - 1) * itemsPerPage,
+                currentPage * itemsPerPage
+              )
+              .map((businessData, index) => (
+                <BusinessComponent key={index} businessData={businessData} />
+              ))
+          )}
         </div>
-        <div>
-          {/* Map over the businessDataList and render BusinessComponent for each business */}
-          {currentBusinessData.map((businessData, index) => (
-            <BusinessComponent key={index} businessData={businessData} />
-          ))}
         </div>
+
+
 
         <div>
           <Pagination 

@@ -17,9 +17,7 @@ const SearchBar = ({jobs, setSearchResults}) => {
     //check every aspect of the job to see if what was entered in the search bar matches
     const resultsArray = jobs.filter(
       (job) => 
-      job.jobTitle.toLowerCase().includes(searchTerm) || job.companyName.toLowerCase().includes(searchTerm)
-    || job.jobLocation.city.toLowerCase().includes(searchTerm) || job.jobLocation.province.toLowerCase().includes(searchTerm) || job.workType.toLowerCase().includes(searchTerm)
-    || job.jobType.toLowerCase().includes(searchTerm))
+      job.businessName.toLowerCase().includes(searchTerm) || job.freelanceType.toLowerCase().includes(searchTerm))
 
     setSearchResults(resultsArray)
 }
