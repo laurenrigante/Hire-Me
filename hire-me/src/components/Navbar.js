@@ -79,14 +79,14 @@ const Navbar = () => {
               
                 {role === 'user' && (
                   <DropdownItem
-                    address={"/MGMTDashboard"}
+                    address={"/FindAFreelancer"}
                     icon={<FaSearch />}
                     text={"Find a Freelancer"}
                   />
                 )}
                 {role === 'business' && (
                   <DropdownItem
-                    address={"/myemployees"}
+                    address={"/mybusinessprofile"}
                     icon={<FaBriefcase />}
                     text={"My Business Page"}
                   />
