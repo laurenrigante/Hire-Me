@@ -39,12 +39,14 @@ const FindFreelancer = () => {
   
     const businessData = [
     {
-      businessName: "Markell Painting Services",
+      businessName: "Markell Painting",
       freelanceType: "Painter",
       picture: paintingImage,
       phoneNumber: "514-569-8475",
       email: "MarkellPainting@hotmail.com",
       businessId: "1",
+      rating: 4,
+      Address: "123 Main St, Montreal"
     },
 
     {
@@ -54,22 +56,28 @@ const FindFreelancer = () => {
       phoneNumber: "514-654-3210",
       email: "sarahReese@hotmail.com",
       businessId: "2",
+      rating : 5,
+      Address: "456 Maple Ave, Montreal"
     },
     {
-      businessName: "Mark's Renovation Solutions",
-      freelanceType: "Renovator , Contractor, HandyMan",
+      businessName: "Mark's Renovation",
+      freelanceType: "Electrician",
       picture:renovationImage,
       phoneNumber: "514-789-0123",
       email: "MRS@hotmail.com",
       businessId: "3",
+      rating: 3,
+      Address: "789 Elm St, Montreal"
     },
     {
-      businessName: "Emily's Plumbing Services",
+      businessName: "Emily's Plumbing",
       freelanceType: "Plumber",
       picture: plumbingImage,
       phoneNumber: "438-654-9870",
       email: "emilytheplumber@outlook.com",
       businessId: "4",
+      rating: 4,
+      Address: "987 Oak St, Montreal"
     },
     {
       businessName: "Jack Electric",
@@ -78,22 +86,28 @@ const FindFreelancer = () => {
       phoneNumber: "514-012-3456",
       email: "JEsolutions@live.com",
       businessId: "5",
+      rating: 5,
+      Address: "345 Pine St, Montreal"
     },
     {
-      businessName: "Sophie's Childcare Services",
-      freelanceType: "Babysitter, Daycare",
+      businessName: "Sophie's Childcare",
+      freelanceType: "Babysitter",
       picture: childcare,
       phoneNumber: "438-555-5555",
       email: "sophieDoone@example.com",
       businessId: "6",
+      rating: 4,
+      Address: "555 Cedar St, Montreal"
     },
     {
-      businessName: "Adam's Construction",
-      freelanceType: "Contractor",
+      businessName: "Adam's Maintenance",
+      freelanceType: "Plumber",
       picture: contractor,
       phoneNumber: "514-222-3333",
       email: "adamPierce@acconstruction.com",
       businessId: "7",
+      rating: 5,
+      Address: "222 Birch St, Montreal"
     },
     {
       businessName: "David's Plumbing Services",
@@ -102,47 +116,39 @@ const FindFreelancer = () => {
       phoneNumber: "438-888-9999",
       email: "davidplumbing@outlook.com",
       businessId: "8",
+      rating: 3,
+      Address: "888 Walnut St, Montreal"
     },
     {
       businessName: "Happy Clown Entertainment",
-      freelanceType: "Birthday Clown , Entertainment, Party",
+      freelanceType: "Entertainer",
       picture: bdayclown,
       phoneNumber: "514-123-4567",
       email: "happyclown@example.com",
       businessId: "9",
+      rating: 5,
+      Address: "123 Cherry St, Montreal"
     },
     {
       businessName: "Beats By DJ Mike",
-      freelanceType: "DJ, Music, Party, Wedding",
+      freelanceType: "Entertainer",
       picture: dj,
       phoneNumber: "438-987-6543",
       email: "djmike@example.com",
       businessId: "10",
+      rating: 4,
+      Address: "987 Apple St, Montreal"
     },
     {
       businessName: "The Wedding Band Company",
-      freelanceType: "Wedding Band, Music, Entertainment",
+      freelanceType: "Entertainer",
       picture: wb,
       phoneNumber: "555-222-3333",
       email: "weddingband@example.com",
       businessId: "11",
-    },
-    {
-      businessName: "Paws & Play Dog Walking Services",
-      freelanceType: "Dog Walker, Dog Walking",
-      picture: dogwalk,
-      phoneNumber: "438-888-9999",
-      email: "pawsandplay@example.com",
-      businessId: "12",
-    },
-    {
-      businessName: "Pet Sitting Services",
-      freelanceType: "Pets, Pet Sitting, Animals",
-      picture: ps,
-      phoneNumber: "438-888-9999",
-      email: "Jessie_animal_lover@hotmail.com",
-      businessId: "13",
-    },
+      rating: 5,
+      Address: "222 Peach St, Montreal"
+    }
   ];
 
       // Slice the array of business data to get items for the current page
@@ -150,7 +156,6 @@ const FindFreelancer = () => {
 
   return (
     <div>
-      <Header />
 
       <div>
         <div>

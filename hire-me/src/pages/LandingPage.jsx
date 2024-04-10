@@ -4,6 +4,7 @@ import Footer from "../components/Footer";
 import "../styling/LandingPage.css";
 import { Link } from "react-router-dom";
 import "../index.css";
+import FindFreelancer from "./FindFreelancer";
 
 
 /**
@@ -26,13 +27,7 @@ const LandingPage = () => {
               className="btndiv"
              // style={{ display: store.get("?user") ? "none" : "block" }}
             >
-              <Link to="/signup" className="btn">
-                {" "}
-                Sign Up
-              </Link>
-              <Link to="/login" className="btn" style={{ marginLeft: "50px" }}>
-                Login
-              </Link>
+              <FindFreelancer>  </FindFreelancer>
             </div>
           </div>
         </div>

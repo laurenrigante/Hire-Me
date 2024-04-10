@@ -1,79 +1,27 @@
-import React from "react";
-import "../styling/Footer.css"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faFacebook,
-  faTwitter,
-  faInstagram,
-} from "@fortawesome/free-brands-svg-icons";
-import { Link } from "react-router-dom";
+// Footer.js
 
-/**
- * Functional component representing the footer section of the website.
- * @returns {JSX.Element} - The JSX for the footer component.
- */
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUser, faSearch, faComment } from '@fortawesome/free-solid-svg-icons';
+import '../styling/Footer.css';
+
 const Footer = () => {
   return (
-    <div className="footerwrapper">
-      <div className="main-footer">
-        <div className="container">
-          
-          <div>
-            <div className="footer-cols">
-              <ul className="footer-links">
-                <p className="titlefooter"> General</p>
-                <li>
-                  <Link to="/FindAFreelancer" className="link">Find a Freelancer</Link>
-                </li>
-                <li>
-                  <Link className="link">Promote My Business</Link>
-                </li>
-                <li>
-                  <Link className="link">HireMe! Premium for Businesses</Link>
-                </li>
-              </ul>
-            </div>
-
-            <div className="footer-cols">
-              <ul className="footer-links">
-                <p className="titlefooter">Help</p>
-                <li>
-                  <Link className="link">Report Bug</Link>
-                </li>
-                <li>
-                  <Link className="link">FAQ</Link>
-                </li>
-                <li>
-                  <Link className="link">Leave a Review</Link>
-                </li>
-              </ul>
-            </div>
-
-            <div className="footer-cols">
-              <ul className="footer-links">
-                <p className="titlefooter"> Follow Our Socials</p>
-                <li className="faicon">
-                  <FontAwesomeIcon icon={faTwitter} />
-                </li>
-                <li className="faicon">
-                  <FontAwesomeIcon icon={faInstagram} />
-                </li>
-                <li className="faicon">
-                  <FontAwesomeIcon icon={faFacebook} />
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div >
-            <p className="intro-text2">
-              &copy;{new Date().getFullYear()} HireMe! Corporation | Terms
-              of Services | Privacy
-            </p>
-          </div>
-        </div>
+    <footer className="footer">
+      <div className="footer-buttons">
+        <Link to="/profile" className="footer-button">
+          <FontAwesomeIcon icon={faUser} className="icon" />
+        </Link>
+        <Link to="/search" className="footer-button">
+          <FontAwesomeIcon icon={faSearch} className="icon" />
+        </Link>
+        <Link to="/chat" className="footer-button">
+          <FontAwesomeIcon icon={faComment} className="icon" />
+        </Link>
       </div>
-    </div>
+    </footer>
   );
 };
+
 export default Footer;
