@@ -1,107 +1,157 @@
-h2{
-    font-family: "Roboto", sans-serif;
-    position: relative;
-    margin-bottom: 3px;
-    color:#2f2c9b;
-    font-size: 20px;
-    font-weight: 500;
-  }
-  /* Overall page styles */
-  .condo-details-container {
-    font-family: "Roboto", sans-serif; /* Add Roboto as the font family */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: auto;
-    background-color: #f0f4f8;
-    margin-bottom:5%;
-  }
+/* BusinessComponent.css */
 
-  .condo-name-user-tag {
-    display: flex;
-    justify-content: space-between;
-    padding-bottom: 10px;
-  }
-  
-  .condo-info {
-    background-color: #ffffff;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    padding: 13px; /* Increased padding for wider form */
-    width: 100%; /* Full width on large screens */
-    max-width: 400px; /* Maximum width for the form */
-    display: flex;
-    flex-direction: column;
-  }
-
-.freelance-type{
-    color:#2f2c9b;
-    font-size: large;
-    font-weight:600;
-}
-  .condo-info p{
-    font-family: "Roboto", sans-serif; /* Add Roboto as the font family */
-    font-weight: lighter;
-    font-size: 18px;
-    margin: 0; /* Remove default margin for paragraph elements */
-  }
-
- 
-
-  .locker-details {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    margin-top: 5px;
-  }
-
-  /* Profile Picture styles */
-  .profile-picture{
-    height: 76px;
-    width: 91px;
-  } 
-  
-  /* Tag styles */
-  .user-tag {
-    /* Shared styles for both renter and owner */
-    border-radius: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 4px 8px;
-    height: 28px;
-    width: 74px;
-    font-size: 20px;
-    font-family: "Roboto", sans-serif;
-    font-weight: lighter;
+/* Original styles */
+h2 {
+  font-family: "Roboto", sans-serif;
+  position: relative;
+  margin-bottom: 3px;
+  color: #2f2c9b;
+  font-size: 20px;
+  font-weight: 500;
 }
 
+.star-rating {
+  top: 3;
+  right: 3%;
+  z-index: 1; /* Ensure stars are placed on top */
+}
 
+.condo-details-container {
+  position: relative;
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  background-color: #f0f4f8;
+  margin-bottom: 5%;
+  overflow: visible; /* Allow overflow */
+}
+
+.condo-info {
+  position: relative;
+  background-color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 13px;
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+.condo-name-user-tag {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 10px;
+}
+
+.freelance-type {
+  color: #2f42bd;
+  font-size: medium;
+  font-weight: 600;
+}
+
+.condo-info p {
+  font-family: "Roboto", sans-serif; /* Add Roboto as the font family */
+  font-weight: lighter;
+  font-size: 18px;
+  margin: 0; /* Remove default margin for paragraph elements */
+}
+
+.locker-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 5px;
+}
+
+/* Profile Picture styles */
+.profile-picture {
+  height: 76px;
+  width: 91px;
+}
+
+/* Tag styles */
+.user-tag {
+  /* Shared styles for both renter and owner */
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4px 8px;
+  height: 28px;
+  width: 74px;
+  font-size: 20px;
+  font-family: "Roboto", sans-serif;
+  font-weight: lighter;
+}
 
 .renter {
-    /* Styles specific to renter */
-    background-color: #77CAF8;
-    color: black;
+  /* Styles specific to renter */
+  background-color: #77caf8;
+  color: black;
 }
-  
-  /* Button styles */
-  
-  .details-button {
-    font-family: "Roboto", sans-serif; /* Add Roboto as the font family */
-    font-size: 18px; /* Chosen font size */
-    background-color: rgb(69, 4, 219); /* Chosen background color from signup2 branch */
-    color: #fff; /* Assuming var(--white) is white, replaced with #fff */
-    border: none; /* No border */
-    border-radius: 4px; /* Chosen border-radius */
-    cursor: pointer; /* Hand cursor on hover */
-    transition: all 0.3s ease; /* Example transition */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Added box-shadow for consistency */
-    height: 33px;
-    width: 120px;
-  }
-  
-  .details-button:hover {
-    background-color: #7975d6; /* Change background color on hover to the lighter lilac color */
-  }
-  
+
+
+
+.details-button:hover {
+  background-color: #7975d6; /* Change background color on hover to the lighter lilac color */
+}
+
+/* Add this to your existing CSS file or create a new one if needed */
+
+.image-and-info {
+  display: flex;
+  flex-direction: row;
+}
+
+.button-group {
+  display: flex;
+}
+
+.profile-picture {
+  height: 85px;
+  width: 105px;
+  margin-right: 10px; /* Add margin to separate image and buttons */
+}
+
+.details-button {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  background-color: rgb(69, 4, 219);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  height: 33px;
+  width: 120px;
+  margin-right: 10px; /* Add margin to separate buttons */
+}
+
+.contact-button {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  background-color: #6091fb; /* Change color for the contact button */
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  height: 33px;
+  width: 120px;
+}
+.rating-buttons{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.label{
+  border-radius: 50px;
+  width: 80px;
+}

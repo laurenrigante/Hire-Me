@@ -1,29 +1,124 @@
-.search-div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .search {
-    padding-bottom: 50px;
-    padding-top:50px;
-  }
-  .search-input {
-    width: 500px;
-    height: 40px;
-    background-color: #e2ebf4;
-    border: 1px solid var(--grey-200);
-    border-radius: 2px;
-    padding: 0.375rem 0.75rem;
-  }
+/* Add this to your SearchBar.css */
+.search{
+  background-color: #a7a5dda3;
+  border: 1px solid var(--grey-200);
+  border-radius: 5px; /* Rounded corners */
+  margin-left: 4px;
+  margin-right: 4px;
+  margin-top: 4px;
+}
+.search-bar-container {
+  margin-top: 20px; /* Add space above */
+  margin-bottom: 20px; /* Add space below */
+  display: flex; /* Use flexbox */
+  align-items: center; /* Align items vertically */
+  margin-right: 5px;
+}
 
-  
-  /*=============================NO RESULTS==============================*/
-  
-  .noResults {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: Roboto, Arial, Helvetica, sans-serif;
-    font-size: larger;
-  }
+.location-icon {
+  margin-right: 5px; /* Add margin to the right of the location icon */
+  margin-left: 5px;
+}
+
+.location-box {
+  display: flex;
+  align-items: center;
+  padding: 0.375rem 0.75rem;
+  border: 1px solid var(--grey-200); /* Add border to the Montreal box */
+  border-radius: 5px; /* Rounded corners */
+  background-color: #e2ebf4; /* Change background color */
+}
+
+.location-box span {
+  margin-left: 5px;
+}
+
+.search {
+  flex: 1; /* Allow search input to grow */
+  margin-left: 5px; /* Add margin to the left of the search bar */
+}
+
+.search-input {
+  width: 100%; /* Adjust width to fill the container */
+  height: 40px;
+  background-color: #f4f4f4;
+  border: 1px solid var(--grey-200);
+  border-radius: 5px; /* Rounded corners */
+  padding: 0.375rem 0.75rem;
+  box-sizing: border-box; /* Include padding and border in the width */
+}
+.filters{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 3px;
+  font-family: "Roboto", sans-serif;
+  font-size: 12.5px;
+  margin-right: 2px;
+}
+.filter-button-electrician{
+  background-color: #41026b; /* Change color for the contact button */
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  height: 33px;
+  width: 120px;
+  margin-right: 5px;
+}
+
+.filter-button-painter{
+  background-color: #5e059a; /* Change color for the contact button */
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  height: 33px;
+  width: 120px;
+  padding: 6px;
+  margin-right: 5px;
+}
+.filter-button-plumber{
+  background-color: #7f19c3; /* Change color for the contact button */
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  height: 33px;
+  width: 120px;
+  padding: 6px;
+  margin-right: 5px;
+}
+.filter-button-babysitter{
+  background-color: rgb(151, 67, 212); /* Change color for the contact button */
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  height: 33px;
+  width: 120px;
+  padding: 6px;
+  margin-right: 5px;
+}
+.filter-button-entertainer{
+  background-color: #a45cd4; /* Change color for the contact button */
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  height: 33px;
+  width: 120px;
+  padding: 6px;
+  margin-right: 5px;
+}

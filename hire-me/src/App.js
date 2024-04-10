@@ -14,11 +14,11 @@ function App() {
     <BrowserRouter>
       <ToastContainer pauseOnHover={false} autoClose={1000} />
       <Routes>
-        <Route path="/" element={<LandingPage />} />
+        <Route path="/" element={<FindFreelancer />} />
         <Route path="/user-profile" element={<UserProfile />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/signup" element={<SignupPage />} />
-        <Route path="/FindAFreelancer" element={<FindFreelancer/>} />
+
         <Route path="/mybusinessprofile" element={<FindFreelancer/>} />
       </Routes>
     </BrowserRouter>
