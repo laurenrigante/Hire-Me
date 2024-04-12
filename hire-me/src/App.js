@@ -8,6 +8,7 @@ import SignupPage from "./pages/SignupPage";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import FindFreelancer from "./pages/FindFreelancer";
+import FreelancerDetails from "./pages/FreelancerDetails";
 
 function App() {
   return (
@@ -19,7 +20,8 @@ function App() {
         <Route path="/login" element={<LoginPage />} />
         <Route path="/signup" element={<SignupPage />} />
 
-        <Route path="/mybusinessprofile" element={<FindFreelancer/>} />
+        <Route path="/mybusinessprofile" element={<FindFreelancer />} />
+        <Route path="/freelancer/:businessId" element={<FreelancerDetails />} />
       </Routes>
     </BrowserRouter>
   );

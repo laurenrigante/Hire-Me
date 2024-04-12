@@ -1,0 +1,133 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex; /* Use flex layout */
+  flex-direction: column; /* Stack children vertically */
+  justify-content: center; /* Center children vertically */
+  align-items: center; /* Center children horizontally */
+  font-family: "Arial", sans-serif;
+  background: #f4f4f4;
+}
+
+/* Header text styles */
+.freelancer-header h1 {
+  color: #2f42bd; /* Changed to purple */
+  font-size: 1.25em; /* Made smaller */
+  margin: 10px 0;
+  text-align: center;
+}
+
+/* Freelancer rating and info styles */
+.freelancer-rating,
+.freelancer-info p {
+  color: #555;
+  margin-bottom: 5px;
+  text-align: center;
+  font-size: 1.1em; /* Made the text a bit bigger */
+}
+
+/* Main content container */
+.freelancer-details-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+/* Freelancer profile card */
+.freelancer-profile-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 390px;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* This will be removed to keep contents together */
+  /* Removed height to allow content to define its size */
+  /* Removed the top and transform property to stop forcing it to the center */
+  margin-bottom: 60px;
+}
+
+/* Image styles */
+.freelancer-avatar {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 10px; /* Center the image */
+  border: 3px solid #fff; /* Optional: for a white border around the image */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Header text styles */
+.freelancer-header h1 {
+  color: #333;
+  font-size: 1.25em; /* Smaller size for the title */
+  margin: 10px 0;
+  text-align: center;
+}
+
+/* Freelancer type label styles */
+.freelancer-type-label {
+  display: inline-block;
+  background-color: #ececec;
+  border-radius: 20px;
+  padding: 5px 15px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-size: 1.1em; /* Larger text for the freelancer type */
+}
+
+/* Freelancer rating and info styles */
+.freelancer-rating,
+.freelancer-info p {
+  color: #555;
+  margin-bottom: 5px;
+  text-align: center;
+  font-size: 1.5em; /* Larger text for details */
+}
+
+/* Hyperlink styles */
+a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive styling */
+@media (max-width: 390px) {
+  .freelancer-details-container {
+    padding: 10px;
+  }
+  .freelancer-profile-card {
+    margin-top: 10px; /* Give some space at the top */
+    margin-bottom: 10px; /* And at the bottom */
+  }
+}
+
+/* Add more media queries as needed for larger devices */
+@media (min-width: 391px) {
+  .freelancer-profile-card {
+    margin-top: 30px; /* More space on larger devices */
+    margin-bottom: 30px;
+  }
+}
+
+.contact-heading,
+.about-heading {
+  font-size: 1.25em; /* Example font size */
+  color: #333; /* Color for the headings */
+  margin-top: 20px; /* Spacing above each heading */
+  margin-bottom: 20px; /* Spacing below each heading */
+}
