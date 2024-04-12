@@ -3,20 +3,16 @@ html {
   margin: 0;
   padding: 0;
   height: 100%;
-  display: flex; /* Use flex layout */
-  flex-direction: column; /* Stack children vertically */
-  justify-content: center; /* Center children vertically */
-  align-items: center; /* Center children horizontally */
   font-family: "Arial", sans-serif;
-  background: #f4f4f4;
+  background: #f4f4f4; /* Assuming a light grey background for any space not covered by elements */
 }
 
 /* Header text styles */
-.freelancer-header h1 {
+.freelancer-header h2 {
   color: #2f42bd; /* Changed to purple */
   font-size: 1.25em; /* Made smaller */
   margin: 10px 0;
-  text-align: center;
+  text-align: left;
 }
 
 /* Freelancer rating and info styles */
@@ -30,12 +26,14 @@ html {
 
 /* Main content container */
 .freelancer-details-container {
+  /* Remove the top and bottom padding */
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+  min-height: 100vh; /* Use full view height for equal spacing */
   box-sizing: border-box;
-  width: 100%;
+  width: 100%; /* Ensure the container spans the full width */
 }
 
 /* Freelancer profile card */
@@ -52,7 +50,6 @@ html {
   justify-content: space-between; /* This will be removed to keep contents together */
   /* Removed height to allow content to define its size */
   /* Removed the top and transform property to stop forcing it to the center */
-  margin-bottom: 60px;
 }
 
 /* Image styles */
@@ -122,12 +119,4 @@ a:hover {
     margin-top: 30px; /* More space on larger devices */
     margin-bottom: 30px;
   }
-}
-
-.contact-heading,
-.about-heading {
-  font-size: 1.25em; /* Example font size */
-  color: #333; /* Color for the headings */
-  margin-top: 20px; /* Spacing above each heading */
-  margin-bottom: 20px; /* Spacing below each heading */
 }

@@ -179,7 +179,7 @@ const FreelancerDetails = () => {
           />
           <div>
             <div className="freelancer-header">
-              <h1>{freelancer.businessName}</h1>
+              <h2>{freelancer.businessName}</h2>
               <button
                 className={`filter-button-${freelancer.freelanceType.toLowerCase()} label`}
               >
@@ -195,11 +195,11 @@ const FreelancerDetails = () => {
                   </span>
                 ))}
               </div>
-              <h2 className="contact-heading">Get in touch:</h2>
+              <h2>Get in touch:</h2> {/* This is the new heading */}
               <p>{freelancer.Address}</p>
               <p>{freelancer.phoneNumber}</p>
               <a href={`mailto:${freelancer.email}`}>{freelancer.email}</a>
-              <h2 className="about-heading">About them:</h2>
+              <h2>About them:</h2> {/* This is the new heading */}
               <p className="freelancer-description">{freelancer.description}</p>
               {/* More details can be added here as needed */}
             </div>
