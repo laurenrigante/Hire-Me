@@ -59,7 +59,7 @@ const BusinessComponent = ({ businessData }) => {
             </button>
             <button
               className="contact-button"
-              onClick={() => console.log("Contact button clicked")}
+              onClick={() => navigate(`/chat`)}
             >
               Contact
             </button>
