@@ -1,43 +1,41 @@
-
 .star-rating label {
-    margin-right: 5px;
-    color: #ccc;
-    cursor: pointer;
+  margin-right: 5px;
+  color: #ccc;
+  cursor: pointer;
 }
 
-
 .star-rating p {
-    margin-top: 10px;
+  margin-top: 10px;
 }
 
 .star-rating {
-    unicode-bidi: bidi-override;
-    color: #ddd;
-    font-size: 15px;
-    height: 2em;
-    width: 7em;
-    overflow: hidden;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-  }
-  
-  .star-rating > span {
-    display: inline-block;
-    position: relative;
-    width: 1em;
-  }
-  
-  .star-rating > span:before {
-    content: "\2605";
-    position: absolute;
-    color: grey;
-  }
-  
-  .star-rating > span.filled:before {
-    color: gold;
-  }
-  
-  .icon {
-    color: inherit;
-  }
+  unicode-bidi: bidi-override;
+  color: #ddd;
+  font-size: 15px;
+  height: 2em;
+  width: 7em;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.star-rating > span {
+  display: inline-block;
+  position: relative;
+  width: 1em;
+}
+
+.star-rating > span:before {
+  content: "\2605";
+  position: absolute;
+  color: grey;
+}
+
+.star-rating > span.filled:before {
+  color: gold;
+}
+
+.icon {
+  color: inherit;
+}
