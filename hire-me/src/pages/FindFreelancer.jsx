@@ -180,7 +180,7 @@ const FindFreelancer = () => {
 
 
 
-        <div>
+        <div style={{paddingBottom:"110px"}}>
           <Pagination 
           itemsPerPage={itemsPerPage}
           totalItems={businessData.length}
