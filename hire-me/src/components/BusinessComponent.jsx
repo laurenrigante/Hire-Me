@@ -42,8 +42,8 @@ const BusinessComponent = ({ businessData }) => {
             {Address}
           </div>
         </div>
-        <div className="rating-buttons">
-          <div className="star-rating">
+        <div className="holding-everything">
+          <div className="star-rating2">
             {[...Array(5)].map((_, i) => {
               return (
                 <span key={i} className={i < rating ? "icon filled" : "icon"}>
@@ -51,11 +51,11 @@ const BusinessComponent = ({ businessData }) => {
                 </span>
               );
             })}
-            <div className="review-count">
+            <div className="review-count" style={{marginLeft:"2px", marginTop:"4px"}}>
                {count}
             </div>
-             
-          </div>
+            </div>  
+          
           <div className="button-group" style={{paddingTop:"15px"}}>
             <button
               className="details-button" 
@@ -72,7 +72,7 @@ const BusinessComponent = ({ businessData }) => {
               Contact
             </button>
           </div>
-        </div>
+          </div>
       </div>
     </div>
   );

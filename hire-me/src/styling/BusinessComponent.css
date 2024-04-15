@@ -10,10 +10,6 @@ h2 {
   font-weight: 500;
 }
 
-.star-rating {
-  top: 3;
-  right: 3%;
-}
 
 .condo-details-container {
   position: relative;
@@ -110,11 +106,19 @@ h2 {
   height: 33px;
   margin-right: 10px; /* Add margin to separate buttons */
 }
-.rating-buttons{
+
+.holding-everything{
   display: flex;
-  flex-direction: row;
+  align-items: center;
   justify-content: space-between;
 }
+
+
+
+.star-rating2 {
+
+}
+
 
 .label {
   background-color: transparent;
