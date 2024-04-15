@@ -16,8 +16,8 @@
 
 /* Header text styles */
 .header2 {
-  color:#5f43b2;/* Changed to purple */
-  font-size: 1.25em; /* Made smaller */
+  color:#5f43b2;
+  font-size: 1.25em; 
   margin: 10px 0;
   text-align: left;
 }
@@ -33,6 +33,9 @@
   margin-left: 50%; /* Add margin between the label and stars */
 }
 
+.review-count{
+  color: #555;
+}
 
 .abouthem{
   margin-top:50px;
