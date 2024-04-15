@@ -4,13 +4,14 @@ import "react-toastify/dist/ReactToastify.css";
 import "../styling/SignupPage.css"; // Ensure your CSS file path is correct
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import { useNavigate } from "react-router-dom";
 
 const SignupPage = () => {
-
- const [previewUrl, setPreviewUrl] = useState();
+  const navigate = useNavigate();
+  const [previewUrl, setPreviewUrl] = useState();
   const [profilePicUrl, setProfilePicUrl] = useState(null);
   const [formData, setFormData] = useState({
-    role: 'user', // "Renter/Owner" as the default role
+    role: "user", // "Renter/Owner" as the default role
     firstName: "",
     lastName: "",
     email: "",
@@ -18,7 +19,7 @@ const SignupPage = () => {
     companyName: "",
     password: "",
     confirmPassword: "",
-    picture: ""
+    picture: "",
   });
   SignupPage.getFormData = () => {
     return formData;
@@ -31,71 +32,9 @@ const SignupPage = () => {
     });
   };
 
-const handleSignup = async (e) => {
+  const handleSignup = async (e) => {
     e.preventDefault();
-   
-    // Validation checks
-    if (
-      (formData.role === 'user' &&
-        (!formData.firstName ||
-          !formData.lastName ||
-          !formData.email ||
-          !formData.password ||
-          !formData.confirmPassword)) ||
-      (formData.role === 'business' &&
-        (!formData.companyName ||
-          !formData.email ||
-          !formData.password ||
-          !formData.confirmPassword))
-    ) {
-      toast.error("Please fill in all mandatory fields.");
-      return;
-    }
-
-    if (!formData.email.includes("@") || !formData.email.includes(".")) {
-      toast.error(
-        "Invalid email format. Please include '@' and '.' in your email address."
-      );
-      return;
-    }
-
-    if (formData.password !== formData.confirmPassword) {
-      toast.error("Passwords do not match.");
-      return;
-    }
-
-    if (formData.password.length < 8) {
-      toast.error("Password must be at least 8 characters long.");
-      return;
-    }
-
-    if (!/[A-Za-z]/.test(formData.password) || !/\d/.test(formData.password)) {
-      toast.error("Password must contain both letters and numbers.");
-      return;
-    }
-    if(profilePicUrl){
-      formData.picture = profilePicUrl;
-    }
-
-    if(formData.role === 'user'){
-      try {
-       // await addUser(formData);
-        window.location.href = '/';
-      } catch (err) {
-        toast.error(err.message);
-      }
-    }
-    
-    else if (formData.role === 'business'){
-      try {
-       // await addCompany(formData);
-        window.location.href = '/';
-      } catch (err) {
-        toast.error(err.message);
-      }
-    }
-    
-  
+    navigate("/chat");
   };
 
   const handlePhotoChange = (event) => {
@@ -109,7 +48,7 @@ const handleSignup = async (e) => {
     }
     if (photo.size > 2097152) return toast.error("File must be less than 2 MB");
 
-      setProfilePicUrl(photo);
+    setProfilePicUrl(photo);
 
     const fileReader = new FileReader();
     fileReader.onloadend = () => {
@@ -117,7 +56,6 @@ const handleSignup = async (e) => {
     };
 
     fileReader.readAsDataURL(photo);
-    
   };
 
   return (
@@ -148,12 +86,7 @@ const handleSignup = async (e) => {
                     }}
                   />
                 ) : (
-                  <img
-                    
-                    alt="profile"
-                    className="rounded-circle"
-                    width={100}
-                  />
+                  <img alt="profile" className="rounded-circle" width={100} />
                 )}
               </div>
             </div>
@@ -162,14 +95,13 @@ const handleSignup = async (e) => {
           <label className="form-label mt-3" htmlFor="customFile">
             Choose an image:
           </label>
-          <div className="row justify-content-center" >
-            <div className="col-sm-" >
+          <div className="row justify-content-center">
+            <div className="col-sm-">
               <input
                 type="file"
                 className="form-control"
                 id="customFile"
                 onChange={handlePhotoChange}
-                
               />
             </div>
           </div>
@@ -188,12 +120,12 @@ const handleSignup = async (e) => {
               value={formData.role}
               onChange={handleChange}
             >
-              <option value= {'user'}> Individual user</option>
-              <option value={'business'}> Business</option>
+              <option value={"user"}> Individual user</option>
+              <option value={"business"}> Business</option>
             </select>
           </div>
 
-          {formData.role === 'user' && (
+          {formData.role === "user" && (
             <>
               <div className="input-group">
                 <label className="signup" htmlFor="firstName">
@@ -233,7 +165,7 @@ const handleSignup = async (e) => {
               </div>
               <div className="input-group">
                 <label className="signup" htmlFor="phoneNumber">
-                  Phone Number 
+                  Phone Number
                 </label>
                 <input
                   type="text"
@@ -246,7 +178,7 @@ const handleSignup = async (e) => {
             </>
           )}
 
-          {formData.role === 'business' && (
+          {formData.role === "business" && (
             <>
               <div className="input-group">
                 <label className="signup" htmlFor="companyName">
@@ -312,7 +244,7 @@ const handleSignup = async (e) => {
             />
           </div>
           <button
-            id = "signup"
+            id="signup"
             type="submit"
             className="loginbtn"
             style={{ width: "100%", borderRadius: "5px" }}

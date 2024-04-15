@@ -7,6 +7,7 @@ import Footer from "../components/Footer";
 import { useNavigate } from "react-router-dom";
 
 const LoginPage = () => {
+  const navigate = useNavigate();
   const [credentials, setCredentials] = useState({
     email: "",
     password: "",
@@ -21,26 +22,11 @@ const LoginPage = () => {
 
   const handleLogin = async (e) => {
     e.preventDefault();
-
-    // Perform validation for email and password
-    if (!credentials.email || !credentials.password) {
-      toast.error("Please enter both email and password.");
-      return;
-    }
-
-    // Perform email validation check
-    if (!credentials.email.includes("@") || !credentials.email.includes(".")) {
-      toast.error(
-        "Invalid email format. Please include '@' and '.' in your email address."
-      );
-      return;
-    }
-
+    navigate("/chat");
   };
 
   return (
     <div>
-      <Header />
       <div className="login-container">
         <form className="login-form" onSubmit={handleLogin}>
           <h2>Login</h2>
@@ -84,18 +70,25 @@ const LoginPage = () => {
             Forgot Password?
           </a>
         </form>
-       
+
         <ToastContainer position="top-right" autoClose={3000} />
       </div>
-      <div style={{ display: "flex", justifyContent: "center" , textAlign: "center", marginTop:"-150px" }}>
-      <a
-            href="/signup"
-            className="forgot-password-link"
-            style={{ color: "#3531a1"}}
-          >
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          textAlign: "center",
+          marginTop: "-150px",
+        }}
+      >
+        <a
+          href="/signup"
+          className="forgot-password-link"
+          style={{ color: "#3531a1" }}
+        >
           Dont have an account with us? Sign up now!
-          </a>
-          </div>
+        </a>
+      </div>
       <Footer />
     </div>
   );
