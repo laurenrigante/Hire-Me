@@ -30,11 +30,12 @@
 }
 
 .star-rating {
-  margin-left: 50%; /* Add margin between the label and stars */
+  margin-left: 40%; /* Add margin between the label and stars */
 }
 
 .review-count{
   color: #555;
+  
 }
 
 .abouthem{
