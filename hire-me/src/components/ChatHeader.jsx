@@ -9,7 +9,7 @@ const ChatHeader = ({ togglePopup }) => {
     return (
         <div className="chat-header">
             <img className="back-arrow" src={backArrow}/>
-            <img className="profile-picture" src={renovationImage}/>
+            <img className="profile-picture2" src={renovationImage}/>
             <div className="name">Mark's Renovation</div>
             <img className="info-button" src={infoButton} onClick={togglePopup}/>
         </div>
