@@ -4,6 +4,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import "../styling/FreelancerDetails.css";
 import "../styling/StarRating.css"; // Import CSS file for styling
+import ReviewComponent from "../components/ReviewComponent";
 
 import paintingImage from "../assets/business_images/painting_company.jpeg";
 import babysittingImage from "../assets/business_images/babysitting.jpeg";
@@ -18,6 +19,10 @@ import dj from "../assets/business_images/dj.jpg";
 import wb from "../assets/business_images/web.jpg";
 import dogwalk from "../assets/business_images/dogwalk.jpg";
 import ps from "../assets/business_images/ps.png";
+import oldman from "../assets/business_images/oldman.jpg";
+import oldlady from "../assets/business_images/oldlady.jpg";
+import youngman from "../assets/business_images/youngman.jpg";
+import younglady from "../assets/business_images/younglady.jpg";
 
 const businessData = [
   {
@@ -31,6 +36,7 @@ const businessData = [
     Address: "123 Main St, Montreal",
     description:
       "Markell Painting offers a vibrant touch to your home with expert painting services. From refreshing your exterior to adding color to your interior, we're here to paint your world brighter.",
+    count: "1k",
   },
 
   {
@@ -44,9 +50,10 @@ const businessData = [
     Address: "456 Maple Ave, Montreal",
     description:
       "Sarah's Babysitting provides nurturing and experienced childcare. Your kids will enjoy creative playtime and educational activities in a safe and loving environment.",
+      count: "2k",
   },
   {
-    businessName: "Mark's Renovation",
+    businessName: "Mark's Electrics",
     freelanceType: "Electrician",
     picture: renovationImage,
     phoneNumber: "514-789-0123",
@@ -56,6 +63,7 @@ const businessData = [
     Address: "789 Elm St, Montreal",
     description:
       "Mark's Renovation brings new life to your living space. Specializing in both minor upgrades and major overhauls, we're committed to making your renovation dreams come true.",
+      count: "254",
   },
   {
     businessName: "Emily's Plumbing",
@@ -68,6 +76,7 @@ const businessData = [
     Address: "987 Oak St, Montreal",
     description:
       "Emily's Plumbing is your go-to for reliable plumbing solutions. From leaky faucets to new installations, we ensure your water is always flowing in the right direction.",
+      count: "450"
   },
   {
     businessName: "Jack Electric",
@@ -80,6 +89,7 @@ const businessData = [
     Address: "345 Pine St, Montreal",
     description:
       "Jack Electric ensures your space is powered safely and efficiently. Our certified electricians provide top-notch service for all your electrical needs, big or small.",
+      count: "3k"
   },
   {
     businessName: "Sophie's Childcare",
@@ -154,6 +164,36 @@ const businessData = [
       "The Wedding Band Company adds the perfect harmony to your special day with live music that sets the tone for romance and celebration. Book us for an event that resonates with love.",
   },
 ];
+const reviews = [
+  {
+    name: "John Doe",
+    review: "Great service! I would definitely recommend Mark's Electrics for all your painting needs.",
+    short: "Great service!",
+    rating: 5,
+    picture: oldman
+  },
+  {
+    name: "Jane Smith",
+    review: "Mark was very professional and did a great job painting my living room. I'm very happy with the results.",
+    short: "Very professional",
+    rating: 4,
+    picture: oldlady
+  },
+  {
+    name: "Alice Johnson",
+    review: "Mark was tardy and rude. I would not recommend his services to anyone.",
+    short: "Tardy and rude",
+    rating: 1,
+    picture: younglady
+  },
+  {
+    name: "Bob Brown",
+    review: "Not the friendliest, but got the job done.",
+    short: "Got the job done",
+    rating: 3,
+    picture: youngman
+  },
+];
 
 const FreelancerDetails = () => {
   const { businessId } = useParams();
@@ -193,7 +233,11 @@ const FreelancerDetails = () => {
                   >
                     ★
                   </span>
+                  
                 ))}
+                <div className="review-count">
+                  {freelancer.count}
+                </div>
               </div>
               <h2>Get in touch:</h2> {/* This is the new heading */}
               <p>{freelancer.Address}</p>
@@ -206,7 +250,15 @@ const FreelancerDetails = () => {
           </div>
         </div>
       </div>
-      <Footer />
+      <div className="reviews-container">
+        <h2>Reviews</h2>
+        <div className="reviews">
+          {reviews.map((review, index) => (
+            <ReviewComponent key={index} businessData={review} />
+          ))}
+        </div>
+      </div>
+        <Footer />
     </div>
   );
 };

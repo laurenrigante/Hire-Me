@@ -1,44 +1,34 @@
 import React from "react";
 import PropTypes from "prop-types";
-import "../styling/BusinessComponent.css";
+import "../styling/ReviewComponent.css";
 import { useNavigate } from "react-router-dom";
 import "../styling/StarRating.css"; // Import CSS file for styling
 
-const BusinessComponent = ({ businessData }) => {
+const ReviewComponent = ({ businessData }) => {
   const navigate = useNavigate();
 
   // Destructuring the businessData object to extract the properties
   const {
-    businessName,
-    freelanceType,
-    picture,
-    phoneNumber,
-    email,
-    businessId,
+    name,
+    short,
+    review,
     rating,
-    Address,
-    count
+    picture
   } = businessData;
 
   return (
     <div className="condo-details-container">
       <div className="condo-info">
         <div className="condo-name-user-tag">
-          <h2>{businessName}</h2>
-          <button
-            className={`filter-button-${freelanceType.toLowerCase()} label`}
-          >
-            {freelanceType}
-          </button>
+          <h2>{short}</h2>
         </div>
         <div className="image-and-info">
           <img src={picture} alt="Profile" className="profile-picture" />
           <div>
-            {email}
+            <b>{name}</b>
             <br></br>
-            {phoneNumber}
+            {review}
             <br></br>
-            {Address}
           </div>
         </div>
         <div className="rating-buttons">
@@ -50,24 +40,7 @@ const BusinessComponent = ({ businessData }) => {
                 </span>
               );
             })}
-            <div className="review-count">
-               {count}
-            </div>
              
-          </div>
-          <div className="button-group">
-            <button
-              className="details-button"
-              onClick={() => navigate(`/freelancer/${businessId}`)}
-            >
-              Details
-            </button>
-            <button
-              className="contact-button"
-              onClick={() => navigate(`/chat`)}
-            >
-              Contact
-            </button>
           </div>
         </div>
       </div>
@@ -75,8 +48,8 @@ const BusinessComponent = ({ businessData }) => {
   );
 };
 
-BusinessComponent.propTypes = {
+ReviewComponent.propTypes = {
   businessData: PropTypes.object.isRequired,
 };
 
-export default BusinessComponent;
+export default ReviewComponent;

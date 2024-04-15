@@ -46,7 +46,8 @@ const FindFreelancer = () => {
       email: "MarkellPainting@hotmail.com",
       businessId: "1",
       rating: 4,
-      Address: "123 Main St, Montreal"
+      Address: "123 Main St, Montreal",
+      count:"1k"
     },
 
     {
@@ -57,17 +58,19 @@ const FindFreelancer = () => {
       email: "sarahReese@hotmail.com",
       businessId: "2",
       rating : 5,
-      Address: "456 Maple Ave, Montreal"
+      Address: "456 Maple Ave, Montreal",
+      count:"2.7k"
     },
     {
-      businessName: "Mark's Renovation",
+      businessName: "Mark's Electrics",
       freelanceType: "Electrician",
       picture:renovationImage,
       phoneNumber: "514-789-0123",
       email: "MRS@hotmail.com",
       businessId: "3",
       rating: 3,
-      Address: "789 Elm St, Montreal"
+      Address: "789 Elm St, Montreal",
+      count:"254"
     },
     {
       businessName: "Emily's Plumbing",
@@ -77,7 +80,8 @@ const FindFreelancer = () => {
       email: "emilytheplumber@outlook.com",
       businessId: "4",
       rating: 4,
-      Address: "987 Oak St, Montreal"
+      Address: "987 Oak St, Montreal",
+      count:"690"
     },
     {
       businessName: "Jack Electric",
@@ -87,7 +91,8 @@ const FindFreelancer = () => {
       email: "JEsolutions@live.com",
       businessId: "5",
       rating: 5,
-      Address: "345 Pine St, Montreal"
+      Address: "345 Pine St, Montreal",
+      count:"3k"
     },
     {
       businessName: "Sophie's Childcare",
@@ -97,7 +102,8 @@ const FindFreelancer = () => {
       email: "sophieDoone@example.com",
       businessId: "6",
       rating: 4,
-      Address: "555 Cedar St, Montreal"
+      Address: "555 Cedar St, Montreal",
+      count:"20"
     },
     {
       businessName: "Adam's Maintenance",
@@ -107,7 +113,8 @@ const FindFreelancer = () => {
       email: "adamPierce@acconstruction.com",
       businessId: "7",
       rating: 5,
-      Address: "222 Birch St, Montreal"
+      Address: "222 Birch St, Montreal",
+      count:"1.5k"
     },
     {
       businessName: "David's Plumbing Services",
@@ -117,7 +124,8 @@ const FindFreelancer = () => {
       email: "davidplumbing@outlook.com",
       businessId: "8",
       rating: 3,
-      Address: "888 Walnut St, Montreal"
+      Address: "888 Walnut St, Montreal",
+      count:"31"
     },
     {
       businessName: "Happy Clown Entertainment",
@@ -127,7 +135,8 @@ const FindFreelancer = () => {
       email: "happyclown@example.com",
       businessId: "9",
       rating: 5,
-      Address: "123 Cherry St, Montreal"
+      Address: "123 Cherry St, Montreal",
+      count:"230"
     },
     {
       businessName: "Beats By DJ Mike",
@@ -137,7 +146,8 @@ const FindFreelancer = () => {
       email: "djmike@example.com",
       businessId: "10",
       rating: 4,
-      Address: "987 Apple St, Montreal"
+      Address: "987 Apple St, Montreal",
+      count:"432"
     },
     {
       businessName: "The Wedding Band Company",
@@ -147,7 +157,8 @@ const FindFreelancer = () => {
       email: "weddingband@example.com",
       businessId: "11",
       rating: 5,
-      Address: "222 Peach St, Montreal"
+      Address: "222 Peach St, Montreal",
+      count:"230"
     }
   ];
 

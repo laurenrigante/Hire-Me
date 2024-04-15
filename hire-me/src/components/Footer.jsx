@@ -13,7 +13,7 @@ const Footer = () => {
         <Link to="/profile" className="footer-button">
           <FontAwesomeIcon icon={faUser} className="icon" />
         </Link>
-        <Link to="/search" className="footer-button">
+        <Link to="/" className="footer-button">
           <FontAwesomeIcon icon={faSearch} className="icon" />
         </Link>
         <Link to="/chat" className="footer-button">
