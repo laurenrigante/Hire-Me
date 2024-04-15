@@ -23,9 +23,10 @@ const BusinessComponent = ({ businessData }) => {
     <div className="condo-details-container">
       <div className="condo-info">
         <div className="condo-name-user-tag">
-          <h2>{businessName}</h2>
+          <h2 style={{color:"#5f43b2"}}>{businessName}</h2>
           <button
             className={`filter-button-${freelanceType.toLowerCase()} label`}
+            
           >
             {freelanceType}
           </button>
@@ -50,16 +51,18 @@ const BusinessComponent = ({ businessData }) => {
               );
             })}
           </div>
-          <div className="button-group">
+          <div className="button-group" style={{paddingTop:"15px"}}>
             <button
-              className="details-button"
+              className="details-button" 
               onClick={() => navigate(`/freelancer/${businessId}`)}
+              style={{fontSize:"16px",width:"80px" }}
             >
               Details
             </button>
             <button
-              className="contact-button"
+              className="details-button"
               onClick={() => navigate(`/chat`)}
+              style={{fontSize:"16px", width:"80px",}}
             >
               Contact
             </button>

@@ -5,7 +5,7 @@ h2 {
   font-family: "Roboto", sans-serif;
   position: relative;
   margin-bottom: 3px;
-  color: #2f2c9b;
+  color: #5f43b2;
   font-size: 20px;
   font-weight: 500;
 }
@@ -13,7 +13,7 @@ h2 {
 .star-rating {
   top: 3;
   right: 3%;
-  z-index: 1; /* Ensure stars are placed on top */
+  z-index: 1; 
 }
 
 .condo-details-container {
@@ -74,26 +74,6 @@ h2 {
   border-radius: 0%;
 }
 
-/* Tag styles */
-.user-tag {
-  /* Shared styles for both renter and owner */
-  border-radius: 5px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 4px 8px;
-  height: 28px;
-  width: 74px;
-  font-size: 20px;
-  font-family: "Roboto", sans-serif;
-  font-weight: lighter;
-}
-
-.renter {
-  /* Styles specific to renter */
-  background-color: #77caf8;
-  color: black;
-}
 
 
 
@@ -120,8 +100,7 @@ h2 {
 
 .details-button {
   font-family: "Roboto", sans-serif;
-  font-size: 18px;
-  background-color: rgb(69, 4, 219);
+  background-color:#5f43b2;
   color: #fff;
   border: none;
   border-radius: 4px;
@@ -129,14 +108,12 @@ h2 {
   transition: all 0.3s ease;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   height: 33px;
-  width: 120px;
   margin-right: 10px; /* Add margin to separate buttons */
 }
 
-.contact-button {
+.details-button:hover {
   font-family: "Roboto", sans-serif;
-  font-size: 18px;
-  background-color: #6091fb; /* Change color for the contact button */
+  background-color:#453183;
   color: #fff;
   border: none;
   border-radius: 4px;
@@ -144,7 +121,7 @@ h2 {
   transition: all 0.3s ease;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   height: 33px;
-  width: 120px;
+  margin-right: 10px; /* Add margin to separate buttons */
 }
 .rating-buttons{
   display: flex;
@@ -152,7 +129,33 @@ h2 {
   justify-content: space-between;
 }
 
-.label{
-  border-radius: 50px;
-  width: 80px;
+.label {
+  background-color: transparent;
+  font-weight: bold;
+  box-shadow: none; 
+  padding-right:0px;
+  margin-right:0px;
+  padding-left:13%;
+  width:auto;
+}
+
+/* Set specific text colors for each freelancer type */
+.filter-button-electrician.label {
+  color: #41026b; /* Electrician type color */
+}
+
+.filter-button-painter.label {
+  color: #5e059a; /* Painter type color */
+}
+
+.filter-button-plumber.label {
+  color: #7f19c3; /* Plumber type color */
+}
+
+.filter-button-babysitter.label {
+  color: rgb(151, 67, 212); /* Babysitter type color */
+}
+
+.filter-button-entertainer.label {
+  color: #a45cd4; /* Entertainer type color */
 }
