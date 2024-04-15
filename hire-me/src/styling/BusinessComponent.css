@@ -132,7 +132,7 @@ h2 {
 
 /* Set specific text colors for each freelancer type */
 .filter-button-electrician.label {
-  color: #41026b; /* Electrician type color */
+  color: #5e059a; /* Electrician type color */
 }
 
 .filter-button-painter.label {
@@ -140,13 +140,13 @@ h2 {
 }
 
 .filter-button-plumber.label {
-  color: #7f19c3; /* Plumber type color */
+  color: #5e059a; /* Plumber type color */
 }
 
 .filter-button-babysitter.label {
-  color: rgb(151, 67, 212); /* Babysitter type color */
+  color: #5e059a; /* Babysitter type color */
 }
 
 .filter-button-entertainer.label {
-  color: #a45cd4; /* Entertainer type color */
+  color: #5e059a; /* Entertainer type color */
 }
