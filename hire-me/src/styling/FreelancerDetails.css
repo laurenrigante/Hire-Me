@@ -34,15 +34,9 @@
 }
 
 
-/* Main content container */
-.freelancer-details-container {
-  /* Remove the top and bottom padding */
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* Center content vertically */
-  align-items: center; /* Center content horizontally */
-  box-sizing: border-box;
-  width: 100%; /* Ensure the container spans the full width */
+.abouthem{
+  margin-top:50px;
+  padding-bottom:10px;
 }
 
 /* Freelancer profile card */

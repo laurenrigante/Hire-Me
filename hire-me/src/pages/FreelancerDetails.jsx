@@ -201,15 +201,17 @@ const FreelancerDetails = () => {
                 ))}
               </div>
               </div>
+              
               <h2 className="header2" >Get in touch:</h2> 
               <p className="info">{freelancer.Address}</p>
               <p className="info">{freelancer.phoneNumber}</p>
               <a href={`mailto:${freelancer.email}`} style={{marginTop:"50px"}}>{freelancer.email} </a>
 
+              <div className="abouthem">
               <h2 className="header2" >About them:</h2> 
 
               <p className="freelancer-description">{freelancer.description}</p>
-            
+              </div>
             </div>
           </div>
         </div>
