@@ -18,18 +18,6 @@ const ChatPage = () => {
 
     const [messages, setMessages] = useState([
 
-        {
-            author: { username: "SYSTEM", id: 2, avatarUrl: logo },
-            text: "If your business is concluded with Mark, please leave a review:",
-            timestamp: 1578366389250,
-            type: "text",
-            buttons: [
-                {
-                    type: "URL",
-                    title: "Review",
-                },
-            ]
-        },
 
         {
             text: "You have joined the conversation",
@@ -58,7 +46,54 @@ const ChatPage = () => {
             text: "Hi Mark!",
             type: "text",
             timestamp: 1578366425250,
-        }
+        },
+
+        {
+            author: {
+                username: "Mark",
+                id: 2,
+                avatarUrl: renovationImage
+            },
+            text: "Hi!",
+            type: "text",
+            timestamp: 1578366425250,
+        },
+
+        //1. send text: Do you do bathroom lights wiring?
+
+        //2. then uncomment this
+
+        // {
+        //     author: {
+        //         username: "Mark",
+        //         id: 2,
+        //         avatarUrl: renovationImage
+        //     },
+        //     text: "I do! Please call me at +1 514-555-4638 so we can discuss this in detail.",
+        //     type: "text",
+        //     timestamp: 1578366425250,
+        // },
+
+        //3. then uncomment this
+
+        // {
+        //     text: "Conversation has ended",
+        //     timestamp: 1578366389250,
+        //     type: "notification"
+        // },
+        //
+        // {
+        //     author: { username: "SYSTEM", id: 2, avatarUrl: logo },
+        //     text: "If your business is concluded with Mark, please leave a review:",
+        //     timestamp: 1578366389250,
+        //     type: "text",
+        //     buttons: [
+        //         {
+        //             type: "URL",
+        //             title: "Review",
+        //         },
+        //     ]
+        // },
     ]);
 
     const handleOnSendMessage = (message) => {
