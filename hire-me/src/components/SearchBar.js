@@ -24,7 +24,7 @@ const SearchBar = ({jobs, setSearchResults}) => {
   }
 
   return (
-    <div className='search'>
+    <div className='search' style={{marginBottom:"20px"}}>
     <div className='search-bar-container'>
       <div className="location-icon">
         <div className="location-box">
