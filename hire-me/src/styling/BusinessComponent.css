@@ -13,7 +13,6 @@ h2 {
 .star-rating {
   top: 3;
   right: 3%;
-  z-index: 1; 
 }
 
 .condo-details-container {
@@ -47,11 +46,7 @@ h2 {
   padding-bottom: 10px;
 }
 
-.freelance-type {
-  color: #2f42bd;
-  font-size: medium;
-  font-weight: 600;
-}
+
 
 .condo-info p {
   font-family: "Roboto", sans-serif; /* Add Roboto as the font family */
