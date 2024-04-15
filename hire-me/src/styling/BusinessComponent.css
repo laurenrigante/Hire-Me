@@ -70,14 +70,6 @@ h2 {
 }
 
 
-
-
-.details-button:hover {
-  background-color: #7975d6; /* Change background color on hover to the lighter lilac color */
-}
-
-/* Add this to your existing CSS file or create a new one if needed */
-
 .image-and-info {
   display: flex;
   flex-direction: row;

@@ -8,19 +8,19 @@
     font-size: 17px;
     border: none;
     background-color: var(--backgroundColor);
-    color: #4540db;
+    color:#5f43b2;
     font-weight: 500;
     font-family: Roboto, Arial, Helvetica, sans-serif;
   }
   
   .pagination button:hover {
-    background-color: #4540db;
+    background-color:#5f43b2;
     color: #fff;
   }
   
   #pageButton.active {
     color: white;
-    background-color: #4540db;
+    background-color:#5f43b2;
   }
   
   #pageButton {
@@ -28,12 +28,12 @@
   }
   
   #pageButton.active:hover {
-    background-color: #4540db;
+    background-color: #453183;
     color: #fff;
   }
   
   .next {
-    color: #4540db;
+    color:#5f43b2;
     font-family: Roboto, Arial, Helvetica, sans-serif;
     font-weight: bold;
     padding: 12px 16px;
@@ -43,7 +43,7 @@
   }
   
   .prev {
-    color: #4540db;
+    color: #5f43b2;
     font-weight: bold;
     font-family: Roboto, Arial, Helvetica, sans-serif;
     font-size: 16px;

@@ -1,28 +1,38 @@
-body,
-html {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  font-family: "Arial", sans-serif;
-  background: #f4f4f4; /* Assuming a light grey background for any space not covered by elements */
+
+
+/* Header text styles */
+.header1 {
+  color:#5f43b2;/* Changed to purple */
+  font-size: 1.25em; /* Made smaller */
+  margin: 10px 0;
+  text-align: center;
+}
+
+.horizontal-line {
+  border: none; /* Remove default border */
+  border-top: 1px solid#5f43b2;; /* Add a solid line */
+  margin: 20px 0; /* Adjust margin as needed */
 }
 
 /* Header text styles */
-.freelancer-header h2 {
-  color: #2f42bd; /* Changed to purple */
+.header2 {
+  color:#5f43b2;/* Changed to purple */
   font-size: 1.25em; /* Made smaller */
   margin: 10px 0;
   text-align: left;
 }
 
-/* Freelancer rating and info styles */
-.freelancer-rating,
-.freelancer-info p {
-  color: #555;
-  margin-bottom: 5px;
-  text-align: center;
-  font-size: 1.1em; /* Made the text a bit bigger */
+
+.label-holder{
+  display: flex; /* Use flexbox */
+  align-items: center; /* Align items vertically */
+  margin-bottom: 35px;
 }
+
+.star-rating {
+  margin-left: 50%; /* Add margin between the label and stars */
+}
+
 
 /* Main content container */
 .freelancer-details-container {
@@ -31,7 +41,6 @@ html {
   flex-direction: column;
   justify-content: center; /* Center content vertically */
   align-items: center; /* Center content horizontally */
-  min-height: 100vh; /* Use full view height for equal spacing */
   box-sizing: border-box;
   width: 100%; /* Ensure the container spans the full width */
 }
@@ -48,15 +57,14 @@ html {
   display: flex;
   flex-direction: column;
   justify-content: space-between; /* This will be removed to keep contents together */
-  /* Removed height to allow content to define its size */
-  /* Removed the top and transform property to stop forcing it to the center */
+  
 }
 
 /* Image styles */
 .freelancer-avatar {
   border-radius: 50%;
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   object-fit: cover;
   display: block;
   margin: 0 auto 10px; /* Center the image */
@@ -64,33 +72,12 @@ html {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
-/* Header text styles */
-.freelancer-header h1 {
-  color: #333;
-  font-size: 1.25em; /* Smaller size for the title */
-  margin: 10px 0;
-  text-align: center;
+
+.info{
+  margin-bottom: 0px;
+  margin-top:0px;
 }
 
-/* Freelancer type label styles */
-.freelancer-type-label {
-  display: inline-block;
-  background-color: #ececec;
-  border-radius: 20px;
-  padding: 5px 15px;
-  margin-bottom: 20px;
-  font-weight: bold;
-  font-size: 1.1em; /* Larger text for the freelancer type */
-}
-
-/* Freelancer rating and info styles */
-.freelancer-rating,
-.freelancer-info p {
-  color: #555;
-  margin-bottom: 5px;
-  text-align: center;
-  font-size: 1.5em; /* Larger text for details */
-}
 
 /* Hyperlink styles */
 a {

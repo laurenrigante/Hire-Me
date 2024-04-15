@@ -179,29 +179,37 @@ const FreelancerDetails = () => {
           />
           <div>
             <div className="freelancer-header">
-              <h2>{freelancer.businessName}</h2>
-              <button
+              <h2 className="header1">{freelancer.businessName}</h2>
+              <hr class="horizontal-line"></hr>
+              <div className="label-holder">
+              <div
                 className={`filter-button-${freelancer.freelanceType.toLowerCase()} label`}
+                style={{ textAlign: 'left', padding:"0px" }}
               >
                 {freelancer.freelanceType}
-              </button>
-              <div className="star-rating">
+              </div>
+              
+              <div className="star-rating" >
                 {[...Array(5)].map((_, i) => (
                   <span
                     key={i}
                     className={i < freelancer.rating ? "star filled" : "star"}
+                    
                   >
                     ★
                   </span>
                 ))}
               </div>
-              <h2>Get in touch:</h2> {/* This is the new heading */}
-              <p>{freelancer.Address}</p>
-              <p>{freelancer.phoneNumber}</p>
-              <a href={`mailto:${freelancer.email}`}>{freelancer.email}</a>
-              <h2>About them:</h2> {/* This is the new heading */}
+              </div>
+              <h2 className="header2" >Get in touch:</h2> 
+              <p className="info">{freelancer.Address}</p>
+              <p className="info">{freelancer.phoneNumber}</p>
+              <a href={`mailto:${freelancer.email}`} style={{marginTop:"50px"}}>{freelancer.email} </a>
+
+              <h2 className="header2" >About them:</h2> 
+
               <p className="freelancer-description">{freelancer.description}</p>
-              {/* More details can be added here as needed */}
+            
             </div>
           </div>
         </div>
