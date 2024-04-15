@@ -17,6 +17,7 @@ const BusinessComponent = ({ businessData }) => {
     businessId,
     rating,
     Address,
+    count
   } = businessData;
 
   return (
@@ -50,6 +51,10 @@ const BusinessComponent = ({ businessData }) => {
                 </span>
               );
             })}
+            <div className="review-count">
+               {count}
+            </div>
+             
           </div>
           <div className="button-group" style={{paddingTop:"15px"}}>
             <button
