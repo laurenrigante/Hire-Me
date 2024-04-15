@@ -1,11 +1,7 @@
-/* ReviewComponent.css */
-.condo-details-container {
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  margin: 0px;
-  padding: 10px;
-  width: 100%; /* Adjust width as needed */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+.title-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .condo-info {
@@ -13,13 +9,9 @@
   flex-direction: column;
 }
 
-.condo-name-user-tag {
+.user-tag {
   display: flex;
-  justify-content: space-between;
-}
-
-.condo-name-user-tag h2 {
-  margin: 0;
+  align-items: center;
 }
 
 .image-and-info {
@@ -34,22 +26,18 @@
   margin-right: 10px;
 }
 
-.rating-buttons {
-  display: flex;
-  align-items: center;
-}
 
-.star-rating {
-  margin-top: 10px;
+
+.star-rating2 {
   display: flex;
   justify-content: flex-end;
 }
 
-.star-rating .icon {
+.star-rating2 .icon {
   font-size: 20px;
   color: #ccc;
 }
 
-.star-rating .filled {
+.star-rating2 .filled {
   color: gold;
 }

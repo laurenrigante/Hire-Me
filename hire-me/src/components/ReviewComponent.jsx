@@ -17,22 +17,13 @@ const ReviewComponent = ({ businessData }) => {
   } = businessData;
 
   return (
-    <div className="condo-details-container">
+    <div className="condo-details-container" style={{ boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)', display: 'flex', alignItems: 'center'}}>
       <div className="condo-info">
-        <div className="condo-name-user-tag">
-          <h2>{short}</h2>
+        <div className="user-tag">
+          <h2 className="title2" style={{color:" #5f43b2", margin: 0}}>{short}</h2>
         </div>
-        <div className="image-and-info">
-          <img src={picture} alt="Profile" className="profile-picture" />
-          <div>
-            <b>{name}</b>
-            <br></br>
-            {review}
-            <br></br>
-          </div>
-        </div>
-        <div className="rating-buttons">
-          <div className="star-rating">
+       
+          <div className="star-rating2">
             {[...Array(5)].map((_, i) => {
               return (
                 <span key={i} className={i < rating ? "icon filled" : "icon"}>
@@ -41,8 +32,21 @@ const ReviewComponent = ({ businessData }) => {
               );
             })}
              
+          
+        </div>
+
+
+
+        <div className="image-and-info">
+          <img src={picture} alt="Profile" className="profile-picture" />
+          <div>
+            <b style={{color:"#3a3153"}}>{name}</b>
+            <br></br>
+            {review}
+            <br></br>
           </div>
         </div>
+     
       </div>
     </div>
   );

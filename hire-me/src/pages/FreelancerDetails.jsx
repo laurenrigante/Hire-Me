@@ -234,7 +234,7 @@ const FreelancerDetails = () => {
                   <span
                     key={i}
                     className={i < freelancer.rating ? "star filled" : "star"}
-                    
+                    style={{fontSize:"20px"}}
                   >
                     ★
                   </span>
@@ -261,8 +261,9 @@ const FreelancerDetails = () => {
         </div>
       </div>
       <div className="reviews-container">
-        <h2>Reviews</h2>
-        <div className="reviews">
+        <h2 style={{color:" #5f43b2", textAlign:"center"}}>Reviews</h2>
+        <hr class="horizontal-line"></hr>
+        <div className="reviews" style={{paddingBottom:"110px"}}>
           {reviews.map((review, index) => (
             <ReviewComponent key={index} businessData={review} />
           ))}
