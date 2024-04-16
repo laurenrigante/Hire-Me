@@ -7,9 +7,7 @@ import Footer from "../components/Footer";
 import Header from "../components/Header";
 import user from "../assets/user.png";
 
-
-
-
+import johndoe from "../assets/johndoe.jpg";
 /**
  * Functional component representing the user profile page.
  * @returns {JSX.Element} User profile page component.
@@ -33,28 +31,28 @@ const UserProfile = () => {
     async function fetchUserData() {
       let tempData;
       //let role = store("role") || RENTER_OWNER;
-      setTheRole('user');
+      setTheRole("user");
       // Assume store("user") is being used correctly to fetch user-specific data
 
-      if (role === 'business') {
-      //  tempData = await getCompanyData(store("user"));
+      if (role === "business") {
+        //  tempData = await getCompanyData(store("user"));
         setCompanyName(companyName);
         setUserType("Business");
-      } else if (role === 'user') {
+      } else if (role === "user") {
         //tempData = await getUserData(store("user"));
         setFirstName(firstName);
         setLastName(lastName);
-        setUserType('individual user');
+        setUserType("individual user");
       } else {
         throw new Error("Role error");
       }
 
-     // setEmail(tempData.email);
-     // setPhoneNumber(tempData.phoneNumber);
-     // setImageSrc((await getProfilePicture(store("user"))) || user);
+      // setEmail(tempData.email);
+      // setPhoneNumber(tempData.phoneNumber);
+      // setImageSrc((await getProfilePicture(store("user"))) || user);
     }
 
-   // fetchUserData();
+    // fetchUserData();
   }, []);
 
   const handleEditClick = () => {
@@ -67,7 +65,7 @@ const UserProfile = () => {
     if (phoneNumber && !/^\d{10}$/.test(phoneNumber))
       return toast.error("Please make sure the phone number format is correct");
 
-    if (role === 'business') {
+    if (role === "business") {
       if (!companyName)
         return toast.error('Please make sure "Company Name" is not empty');
 
@@ -115,7 +113,7 @@ const UserProfile = () => {
         return toast.error("File must be less than 2 MB");
 
       try {
-       // updateUserPicture(store("user"), photo);
+        // updateUserPicture(store("user"), photo);
         setImageSrc(photo);
       } catch (e) {
         toast.error(e);
@@ -144,13 +142,13 @@ const UserProfile = () => {
   //delete function
   const deleteAccountAttempt = async () => {
     try {
-    //  await deleteAccount(email);
+      //  await deleteAccount(email);
     } catch (error) {
       toast.error("Error deleting account");
     }
     setShow(false);
-  //  store.remove("user");
-  //  store.remove("role");
+    //  store.remove("user");
+    //  store.remove("role");
     window.location.href = "/";
   };
 
@@ -203,7 +201,7 @@ const UserProfile = () => {
 
     let data;
     try {
-     // data = await changePassword(store("user"), dataForm);
+      // data = await changePassword(store("user"), dataForm);
     } catch (err) {
       toast.error(err.message);
     }
@@ -222,7 +220,6 @@ const UserProfile = () => {
 
   return (
     <div>
-      <Header />
       <div style={{ backgroundColor: "#f8f9fa" }}>
         <link
           rel="stylesheet"
@@ -238,55 +235,22 @@ const UserProfile = () => {
                   <div className="card">
                     <div className="card-body">
                       <div className="d-flex flex-column align-items-center text-center">
-                        {imageSrc ? (
-                          <img
-                            src={imageSrc}
-                            alt="Profile"
-                            className="rounded-circle"
-                            style={{
-                              width: "150px",
-                              height: "150px",
-                              objectFit: "cover",
-                            }}
-                          />
-                        ) : (
-                          <img
-                            //src={user}
-                            alt="profile.jpg"
-                            className="rounded-circle"
-                            width={150}
-                          />
-                        )}
+                        <img
+                          src={johndoe} // Directly using the imported image
+                          alt="Profile"
+                          className="rounded-circle"
+                          style={{
+                            width: "150px",
+                            height: "150px",
+                            objectFit: "cover",
+                          }}
+                        />
+                        {/* Upload functionality UI exists but is non-functional */}
                       </div>
                     </div>
                   </div>
 
-                  <form>
-                    <label className="form-label mt-3" htmlFor="customFile">
-                      Choose an image:
-                    </label>
-
-                    <div className="row">
-                      <div className="col-sm-8">
-                        <input
-                          type="file"
-                          className="form-control"
-                          id="customFile"
-                        />
-                      </div>
-                      <div className="col-sm-4">
-                        <button
-                          type="button"
-                          className="form-control"
-                          onClick={handlePhotoChange}
-                        >
-                          Upload
-                        </button>
-                      </div>
-                    </div>
-                  </form>
-
-                  {role === 'business' && (
+                  {role === "business" && (
                     <div className="card mt-3">
                       <ul className="list-group list-group-flush">
                         <li className="list-group-item d-flex justify-content-between align-items-center flex-wrap">
@@ -364,13 +328,15 @@ const UserProfile = () => {
                       </ul>
                     </div>
                   )}
-                  <button
-                    type="button"
-                    className="btn btn-danger btn-block mt-2"
-                    onClick={() => handleClickDelete()}
-                  >
-                    Delete Account
-                  </button>
+                  <div className="center-buttons">
+                    <button
+                      type="button"
+                      className="btn btn-danger btn-block mt-2"
+                      //onClick={() => handleClickDelete()}
+                    >
+                      Delete Account
+                    </button>
+                  </div>
 
                   {/*EVENTUALLY IMPLEMENT PASSWORD CONFIRMATION*/}
                   <DeleteModal
@@ -385,7 +351,7 @@ const UserProfile = () => {
                 <div className="col-md-8">
                   <div className="card mb-3">
                     <div className="card-body">
-                      {role !== 'business' && (
+                      {role !== "business" && (
                         <div className="row">
                           <div className="col-sm-3">
                             <h6 className="mb-0">First Name</h6>
@@ -404,15 +370,15 @@ const UserProfile = () => {
                                 data-testid="FirstName"
                               />
                             ) : (
-                              <span>{firstName}</span>
+                              <span>{firstName ? firstName : "John"}</span>
                             )}
                           </div>
                         </div>
                       )}
 
-                      {role !== 'business' && <hr />}
+                      {role !== "business" && <hr />}
 
-                      {role !== 'business' && (
+                      {role !== "business" && (
                         <div className="row">
                           <div className="col-sm-3">
                             <h6 className="mb-0">Last Name</h6>
@@ -431,13 +397,13 @@ const UserProfile = () => {
                                 data-testid="LastName"
                               />
                             ) : (
-                              <span>{lastName}</span>
+                              <span>{lastName ? lastName : "Doe"}</span>
                             )}
                           </div>
                         </div>
                       )}
 
-                      {role === 'business' && (
+                      {role === "business" && (
                         <div className="row">
                           <div className="col-sm-3">
                             <h6 className="mb-0">Company Name</h6>
@@ -477,7 +443,7 @@ const UserProfile = () => {
                               disabled
                             />
                           ) : (
-                            <span>{email}</span>
+                            <span>{email ? email : "john.doe@gmail.com"}</span>
                           )}
                         </div>
                       </div>
@@ -510,25 +476,6 @@ const UserProfile = () => {
                         </div>
                       </div>
                       <hr />
-                      <div className="row">
-                        <div className="col-sm-3">
-                          <h6 className="mb-0">User type</h6>
-                        </div>
-                        <div className="col-sm-9 text-secondary text-capitalize">
-                          {isEditMode ? (
-                            <input
-                              type="text"
-                              className={"form-control text-capitalize"}
-                              name="role"
-                              value={userType}
-                              disabled
-                            />
-                          ) : (
-                            <span>{userType}</span>
-                          )}
-                        </div>
-                      </div>
-                      <hr />
 
                       <div className="row">
                         <div className="col-sm-12 d-flex justify-content-between">
@@ -551,12 +498,16 @@ const UserProfile = () => {
                               </button>
                             </>
                           ) : (
-                            <button
-                              className="btn editProfile"
-                              onClick={() => handleEditClick()}
-                            >
-                              Edit Profile
-                            </button>
+                            <div className="center-buttons">
+                              <div className="center-buttons">
+                                <button
+                                  className="btn editProfile"
+                                  //onClick={() => handleEditClick()}
+                                >
+                                  Edit Profile
+                                </button>
+                              </div>
+                            </div>
                           )}
                         </div>
                       </div>
@@ -565,71 +516,7 @@ const UserProfile = () => {
                   <form
                     className="row gutters-md"
                     onSubmit={handleChangePassword}
-                  >
-                    <div className="col-md-12">
-                      <div className="card mb-3">
-                        <div className="card-body">
-                          <div className="row">
-                            <div className="col">
-                              <h6 className="mb-0 mt-2">Current Password</h6>
-                            </div>
-                          </div>
-                          <div className="row mt-2">
-                            <div className="col-sm-9 text-secondary">
-                              <input
-                                type="password"
-                                className="form-control"
-                                name="currentPassword"
-                                placeholder="**********"
-                                value={currentPassword}
-                                onChange={handleCurrentPasswordChange}
-                                data-testid="CurrentPassword"
-                              />
-                            </div>
-                          </div>
-                          <div className="row">
-                            <div className="col">
-                              <h6 className="mb-0 mt-4">New Password</h6>
-                            </div>
-                          </div>
-                          <div className="row mt-2">
-                            <div className="col-sm-9 text-secondary">
-                              <input
-                                type="password"
-                                className="form-control"
-                                name="newPassword"
-                                placeholder="**********"
-                                value={newPassword}
-                                onChange={handleNewPasswordChange}
-                                data-testid="NewPassword"
-                              />
-                            </div>
-                          </div>
-                          <div className="row">
-                            <div className="col">
-                              <h6 className="mb-0 mt-4">Confirm Password</h6>
-                            </div>
-                          </div>
-                          <div className="row mt-2">
-                            <div className="col-sm-9 text-secondary">
-                              <input
-                                type="password"
-                                className="form-control"
-                                name="confirmPassword"
-                                placeholder="**********"
-                                value={confirmPassword}
-                                onChange={handleConfirmPasswordChange}
-                                data-testid="ConfirmPassword"
-                              />
-                            </div>
-                          </div>
-                          <button className="btn mt-3 changePassword">
-                            Change Password
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  </form>
+                  ></form>
                 </div>
               </div>
             </div>
