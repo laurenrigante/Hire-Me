@@ -1,93 +1,89 @@
 /* LoginPage.css */
 
+h2 {
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  position: relative;
+  margin-bottom: 3px;
+  color: #2f2c9b;
+}
+/* Overall page styles */
+.login-container {
+  font-family: "Roboto", sans-serif; /* Add Roboto as the font family */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f4f4;
+}
 
-h2{
-    font-family: Roboto, Arial, Helvetica, sans-serif;
-    position: relative;
-    margin-bottom: 3px;
-    color:#2f2c9b;
-  }
-  /* Overall page styles */
-  .login-container {
-    font-family: "Roboto", sans-serif; /* Add Roboto as the font family */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f4f4f4;
-  }
-  
-  .login-form {
-    font-family: "Roboto", sans-serif; /* Add Roboto as the font family */
-    background-color: #ffffff;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    padding: 30px; /* Increased padding for wider form */
-    text-align: center;
-    width: 100%; /* Full width on large screens */
-    max-width: 400px; /* Maximum width for the form */
-  }
-  
-  /* Input styles */
-  .input-group {
-    margin-bottom: 20px;
-    text-align: left;
-  }
-  
-  .login {
-    display: block;
-    margin-bottom: 6px;
-    color: #382fb8;
-    font-weight: bold;
-  }
-  
-  input {
-    font-family: "Roboto", sans-serif; /* Add Roboto as the font family */
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #e1e1e1;
-    border-radius: 4px;
-    font-size: 16px;
-  }
-  
-  /* Resolved Button styles combining both branches */
-  
-  .loginbtn {
-    font-family: "Roboto", sans-serif; /* Add Roboto as the font family */
-    background-color: #4540db; /* Chosen background color from signup2 branch */
-    color: #fff; /* Assuming var(--white) is white, replaced with #fff */
-    padding: 10px 20px; /* Combined padding */
-    border: none; /* No border */
-    border-radius: 4px; /* Chosen border-radius */
-    font-size: 18px; /* Chosen font size */
-    cursor: pointer; /* Hand cursor on hover */
-    transition: all 0.3s ease; /* Example transition */
-    text-transform: capitalize; /* Text style */
-    display: inline-block; /* Display style */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Added box-shadow for consistency */
-  }
-  
-  .loginbtn:hover {
-    background-color: #7975d6; /* Change background color on hover to the lighter lilac color */
-    color: #ffffff; /* Change text color on hover to white */
-  }
-  
-  /* Forgot password link */
-  .forgot-password-link {
-    font-family: "Roboto", sans-serif; /* Add Roboto as the font family */
-    display: block;
-    margin-top: 10px;
-    text-align: right;
-    text-decoration: none;
-    color: #3531a1;
-    font-weight: bold;
-  }
-  
-  .forgot-password-link:hover {
-    text-decoration: underline;
-  }
-  
-  .footerwrapper {
-    background-color: #f0f4f8 !important;
-  }
-  
+.login-form {
+  font-family: "Roboto", sans-serif; /* Add Roboto as the font family */
+  background-color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 30px; /* Increased padding for wider form */
+  text-align: center;
+  width: 100%; /* Full width on large screens */
+  max-width: 400px; /* Maximum width for the form */
+}
+
+/* Input styles */
+.input-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.login {
+  display: block;
+  margin-bottom: 6px;
+  color: #382fb8;
+  font-weight: bold;
+}
+
+input {
+  font-family: "Roboto", sans-serif; /* Add Roboto as the font family */
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #e1e1e1;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+/* Resolved Button styles combining both branches */
+
+.loginbtn {
+  background-color: #5f43b2; /* Updated button color */
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: capitalize;
+  display: inline-block;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.loginbtn:hover {
+  background-color: #4e34a3; /* Darkened the hover color slightly */
+  color: #ffffff;
+}
+/* Forgot password link */
+.forgot-password-link {
+  font-family: "Roboto", sans-serif; /* Add Roboto as the font family */
+  display: block;
+  margin-top: 10px;
+  text-align: right;
+  text-decoration: none;
+  color: #3531a1;
+  font-weight: bold;
+}
+
+.forgot-password-link:hover {
+  text-decoration: underline;
+}
+
+.footerwrapper {
+  background-color: #f0f4f8 !important;
+}
