@@ -60,7 +60,6 @@ const SignupPage = () => {
 
   return (
     <div>
-      <Header />
       <link
         rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
@@ -254,7 +253,7 @@ const SignupPage = () => {
           <a
             href="/login"
             className="forgot-password-link"
-            style={{ color: "#3531a1", marginTop: "35px" }}
+            style={{ color: "#5f43b2", marginTop: "35px" }}
           >
             Already have an account?
           </a>

@@ -29,10 +29,10 @@ const LoginPage = () => {
     <div>
       <div className="login-container">
         <form className="login-form" onSubmit={handleLogin}>
-          <h2>Login</h2>
+          <h2>Log In</h2> {/* Changed the caption here */}
           <div className="input-group">
             <label className="signup" htmlFor="email">
-              Email
+              Email {/* Changed label for email */}
             </label>
             <input
               type="text"
@@ -44,7 +44,7 @@ const LoginPage = () => {
           </div>
           <div className="input-group">
             <label className="signup" htmlFor="password">
-              Password
+              Password {/* Changed label for password */}
             </label>
             <input
               type="password"
@@ -61,11 +61,10 @@ const LoginPage = () => {
           >
             Login
           </button>
-
           <a
             href="#"
             className="forgot-password-link"
-            style={{ color: "#3531a1" }}
+            style={{ color: "#5f43b2" }}
           >
             Forgot Password?
           </a>
@@ -84,9 +83,9 @@ const LoginPage = () => {
         <a
           href="/signup"
           className="forgot-password-link"
-          style={{ color: "#3531a1" }}
+          style={{ color: "#5f43b2" }}
         >
-          Dont have an account with us? Sign up now!
+          Don't have an account with us? Sign up now!
         </a>
       </div>
       <Footer />
